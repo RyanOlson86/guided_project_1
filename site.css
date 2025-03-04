@@ -13,15 +13,15 @@ p {
 :root {
   font-family: Arial, Helvetica, sans-serif;
   --dark1: black;
-  --light1: white;
-  --dark2: darkblue;
-  --light2: lightblue;
-  background-color: var(--light1);
-  color: var(--dark1);
+    --light1: white;
+    --dark2: #ffe919;
+    --light2: #616161;
+    color: var(--light1);
+    background-image: url(https://cdn.mos.cms.futurecdn.net/HuGGeENt6kGyixe3hT9tnY.jpg.webp);
 }
 
 button {
-  background-color: var(--light2);
+  background-color: var(--dark1);
   color: var(--dark2);
   font-weight: bold;
   padding: 10px;
@@ -65,7 +65,7 @@ label {
   border: 1px solid var(--dark2);
   border-radius: 5px;
   color: var(--dark2);
-  background-color: var(--light2);
+  background-color: var(--dark1);
   font-weight: bold;
 }
 
@@ -84,8 +84,10 @@ h1#name {
 #generalInfo p {
   padding: 20px;
   margin: 10px;
+  border-radius: 5px;
   color: var(--dark2);
   background-color: var(--light2);
+  opacity: 0.9;
 }
 
 #generalInfo span {
@@ -113,7 +115,7 @@ section#films a {
   text-decoration: none;
   font-size: 1.1em;
 
-  background-color: var(--light2);
+  background-color: var(--dark1);
   color: var(--dark2);
   font-weight: bold;
   padding: 10px;
@@ -127,6 +129,3 @@ section#films a {
   font-size: 5rem;
 }
 
-h2{
-  font-size: 3rem;
-}
