@@ -38,7 +38,7 @@ async function getFilms(id) {
 
 }
 async function fetchHomeworld(character) {
-    const url = `${baseUrl}/film/${character?.homeworld}`;
+    const url = `${baseUrl}/films/${character?.homeworld}`;
     const planet = await fetch(url)
         .then(res => res.json())
     return planet;
@@ -73,7 +73,7 @@ const renderFilms = (films, characters, planets) => {
     episodeno.textContent = films?.episode_id;
 
     const charactersList = characters.map((char) => {
-        return `<li><a href="/character.html?id=${char.id}">${char.name}</a></li>`
+        return `<li><a href="/character.html?id=${char.id}">${char.name}></a></li>`
     })
     document.querySelector('#characterList').innerHTML = charactersList;
 

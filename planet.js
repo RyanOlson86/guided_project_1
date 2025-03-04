@@ -63,7 +63,7 @@ function renderCharacters() {
 function renderFilms(){
     let newHtml = "";
     films?.map(film => {
-        newHtml += `<a href="/films.html?id=${film.id}">${film.title}</a>`
+        newHtml += `<a href="/film.html?id=${film.id}">${film.title}</a>`
     })
     document.querySelector('div#films-div').innerHTML = newHtml;
 }
