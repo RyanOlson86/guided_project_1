@@ -121,3 +121,12 @@ section#films a {
   border-radius: 5px;
   border: 1px solid var(--dark2);
 }
+
+#title{
+  margin: 20px;
+  font-size: 5rem;
+}
+
+h2{
+  font-size: 3rem;
+}

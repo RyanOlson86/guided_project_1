@@ -38,7 +38,7 @@ async function getFilms(id) {
 
 }
 async function fetchHomeworld(character) {
-    const url = `${baseUrl}/films/${character?.homeworld}`;
+    const url = `${baseUrl}/film/${character?.homeworld}`;
     const planet = await fetch(url)
         .then(res => res.json())
     return planet;
