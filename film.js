@@ -27,9 +27,6 @@ async function getFilms(id) {
         films = await fetchFilms(id)
         characters = await fetchCharacter(id)
         planets = await fetchPlanets(id)
-        console.log(films);
-        console.log(characters);
-        console.log(planets);
     }
     catch (ex) {
         console.error(`Error reading character ${id} data.`, ex.message);
@@ -37,12 +34,6 @@ async function getFilms(id) {
     renderFilms(films, characters, planets);
 
 }
-// async function fetchHomeworld(character) {
-//     const url = `${baseUrl}/films/${character?.homeworld}`;
-//     const planet = await fetch(url)
-//         .then(res => res.json())
-//     return planet;
-// }
 
 async function fetchCharacter(id) {
     let characterUrl = `${baseUrl}/films/${id}/characters`;
@@ -66,7 +57,7 @@ async function fetchPlanets(id) {
 }
 
 const renderFilms = (films, characters, planets) => {
-    let charactersHTML ="";
+    let charactersHTML = "";
     let planetsHTML = "";
     document.title = `SWAPI - ${films?.title}`;  // Just to make the browser tab say their name
     nameH1.textContent = films?.title;
@@ -74,15 +65,15 @@ const renderFilms = (films, characters, planets) => {
     directorname.textContent = films?.director;
     episodeno.textContent = films?.episode_id;
 
-    const charactersList = characters.map((char) => { 
+    const charactersList = characters.map((char) => {
 
-        charactersHTML+= `<li><a href="/character.html?id=${char.id}">${char.name}</a></li>`
+        charactersHTML += `<li><a href="/character.html?id=${char.id}">${char.name}</a></li>`
     })
     document.querySelector('#characterList').innerHTML = charactersHTML;
 
     const planetList = planets.map((planet) => {
-    
-         planetsHTML+=`<li><a href="/planet.html?id=${planet.id}">${planet.name}</a></li>`
+
+        planetsHTML += `<li><a href="/planet.html?id=${planet.id}">${planet.name}</a></li>`
     })
 
     document.querySelector('#planetList').innerHTML = planetsHTML;
